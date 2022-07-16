@@ -1,5 +1,7 @@
 //  ___FILEHEADER___
 
+import Foundation
+
 // MARK: - Interactor
 protocol ___VARIABLE_moduleName:identifier___InteractorProtocol: AnyObject {
 
