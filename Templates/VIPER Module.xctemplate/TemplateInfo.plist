@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Kind</key>
+	<string>Xcode.IDEKit.TextSubstitutionFileTemplateKind</string>
+	<key>Identifier</key>
+	<string>com.salaourn.uikit-swift-viper-module</string>
+	<key>SortOrder</key>
+	<integer>1</integer>
+	<key>CFBundleIdentifier</key>
+	<string></string>
+	<key>Platforms</key>
+	<array>
+		<string>com.apple.platform.iphoneos</string>
+	</array>
+	<key>Options</key>
+	<array>
+		<dict>
+			<key>Default</key>
+			<string>___VARIABLE_moduleName___</string>
+			<key>Identifier</key>
+			<string>productName</string>
+			<key>Type</key>
+			<string>static</string>
+		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>moduleName</string>
+			<key>Required</key>
+			<true/>
+			<key>Name</key>
+			<string>Module:</string>
+			<key>Description</key>
+			<string>The name of the VIPER Module</string>
+			<key>Type</key>
+			<string>text</string>
+			<key>Default</key>
+			<string>VIPERModule</string>
+		</dict>
+	</array>
+</dict>
+</plist>
