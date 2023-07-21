@@ -2,15 +2,13 @@
 
 ## Instalation
 #### Automatic:
-You can install templates simply by running:
+You can install templates & snippets by running:
 ```bash
 $ ./install.sh
 ```
 
 * To install templates exclusively, use the `-t` option.
 * To install snippets exclusively, use the `-s` option.
-* Providing both `-t` and `-s` options (i.e., `-ts` or `-st`) will install both templates and snippets.
-* If no options are provided, the script will default to installing both templates and snippets.
 
 #### Manual:
 Copy the folders on the left into a source directory on the right:

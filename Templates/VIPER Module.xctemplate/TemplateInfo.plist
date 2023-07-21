@@ -38,6 +38,21 @@
 			<key>Default</key>
 			<string>VIPERModule</string>
 		</dict>
+		<dict>
+			<key>Identifier</key>
+			<string>navigation</string>
+			<key>Name</key>
+			<string>Navigation component:</string>
+			<key>Description</key>
+			<string>Name of a component that performs navigation; Router or Wireframe</string>
+			<key>Type</key>
+			<string>popup</string>
+			<key>Values</key>
+			<array>
+				<string>Router</string>
+				<string>Wireframe</string>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
