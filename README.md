@@ -30,6 +30,7 @@ Adds five new files for a single screen built in VIPER architecture, all togethe
 * {FILE_NAME}Router.swift -> Navigation
 * {FILE_NAME}ViewController.swift -> View
 
+Before you start using your VIPER module, you'll need a base navigation component class: BaseRouter or BaseWireframe, depending on the navigation component you selected during module creation. You can find simple versions of these files in the `Base VIPER Files` folder.
 
 ## Code Snippets
 
