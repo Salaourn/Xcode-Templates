@@ -4,21 +4,35 @@ protocol BaseRouterProtocol: AnyObject {
 }
 
 class BaseRouter<ViewController: UIViewController> {
-    private unowned var _viewController: ViewController
+    /// The view controller this router manages.
+    ///
+    /// Returns `nil` if the view controller has been deallocated.
+    /// Use optional chaining for navigation calls
+    /// that should gracefully no-op when the module has been torn down.
+    weak let viewController: ViewController?
+    
+    /// Keeps the view controller alive until `firstAccessViewController`
+    /// is first accessed, which clears this reference.
     private var _temporaryStoredViewController: ViewController?
     
-    var viewController: ViewController {
+    /// Non-optional access to the view controller, intended for first access
+    /// during module creation - e.g. when passing to a parent such as
+    /// `UINavigationController(rootViewController:)` or presenting it.
+    ///
+    /// Releases the temporary strong reference that keeps the view controller
+    /// alive until it's stored by a parent.
+    var firstAccessViewController: View {
         defer { _temporaryStoredViewController = nil }
-        return _viewController
+        return viewController!
     }
     
     var navigationController: UINavigationController? {
-        return viewController.navigationController
+        return viewController?.navigationController
     }
     
     init(viewController: ViewController) {
-        _temporaryStoredViewController = viewController
-        _viewController = viewController
+        self.viewController = viewController
+        self._temporaryStoredViewController = viewController
     }
 }
 
